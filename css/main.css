@@ -87,7 +87,10 @@ textarea {
    Author's custom styles
    ========================================================================== */
 /*********** Global styles ***************/
-   .content-wrapper{
+  body{
+    width: 360px;
+  } 
+  .content-wrapper{
     display: flex;
     flex-flow: row wrap;
     width: 90%;
@@ -102,14 +105,29 @@ header, footer{
   align-items: center;
   flex-flow: row wrap;
 }
-header{
+header .content-wrapper{
   padding: 15px 0;
+}
+header .logo {
+  width: 100%;
+  text-align: center;
 }
 .header-divider{
   width: 100%;
+  border-bottom: 1px solid grey;
 }
 header nav{
-  width: 60%;
+  width: 100%;
+}
+nav ul{
+  padding-left: 0;
+  text-align: center;
+}
+nav li{
+  list-style: none;
+}
+nav a{
+  text-decoration: none;
 }
 footer .content-wrapper{
   width: 55%;
@@ -219,15 +237,154 @@ article{
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width: 768px) {
+  /* tablet styles here */
+  body{
+    width: 768px;
+  }
+  .content-wrapper{
+    padding: 0 3em;
+  }
+  header .logo{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1em;
+  }
+  header nav{
+    width: 45%;
+  }
+  header nav ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+  header li{
+    padding-left: 2em;
+  }
+  
+  .header-divider{
+    display: none;
+  }
+  aside h1{
+    width: 70%;
+  }
+
+  /**** aside section ****/
+  .newsletter {
+    display: flex;
+  }
+  .form-description, .form-title{
+    width: 50%;
+  }
+  .form-description{
+    margin-right: 2em;
+  }
+  .form-description h2 {
+    margin-bottom: 1em;
+  }
+  .form-title{
+    margin-left: 2em;
+  }
+  
+  .form-text {
+    width: 250px;
+    margin-bottom: 1em;
+  }
+  .form-button {
+    width: 270px;
+  }
+
+  /**** Features section ****/
+  .features article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    flex: 1 1 280px;
+    padding: 0 2em;
+  }
+
+  /**** Reviews section ****/
+  .review-title{
+    display: flex;
+  }
+
+  /**** Footer section ****/
+  footer .content-wrapper {
+    width: 100%;
+    justify-content: space-around;
+  }
+  .footer-top {
+    display: flex;    
+  }
+  .contact, .social{
+    display: flex;
+    flex-basis: 300px;
+    align-items: center;
+    padding-bottom: 2em;
+  }
+  .contact{
+    text-align: center;
+  }
+  .social{
+    display: inline-block;
+    text-align: center;
+    justify-content: flex-end;
+  }
+
 }
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+@media only screen and (min-width: 1200px) {
+  /* desktop styles here */
+  body{
+    width: 1200px;
+  }
+  .content-wrapper{
+    padding: 0 2em;
+  }
+  /**** aside section ****/
+  .newsletter {
+    display: flex;
+    width: 100%;
+  }
+  .form-description, .form-title{
+    width: 50%;
+  }
+  .form-description{
+    margin-right: 2em;
+  }
+  .form-description h2 {
+    margin-bottom: 1em;
+  }
+  .form-title{
+    margin-left: 2em;
+  }
+}
+
+/*** Footer section ***/
+footer .content-wrapper {
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.footer-top {
+  display: flex;    
+}
+.contact, .social{
+  display: flex;
+  flex-basis: 500px;
+  align-items: center;
+  padding-bottom: 2em;
+  width: 500px;
+}
+.contact{
+  text-align: center;
+}
+.social{
+  display: inline-block;
+  text-align: center;
+  justify-content: flex-end;
 }
 
 /* ==========================================================================
