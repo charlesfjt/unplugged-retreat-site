@@ -26,12 +26,14 @@
   <!-- Add your site or application content here -->
   <header>
     <div class="content-wrapper">
-      <a href="#"><img src="" alt="unplugged logo"></a>
+      <div class="logo">
+        <a href="/index.html"><img src="" alt="unplugged logo"></a>
+      </div>
       <div class="header-divider"></div>
       <nav>
         <ul>
-          <li><a href="../faq-page/index.html" target="_blank">FAQ</a></li>
-          <li><a href="index.html">About</a></li>
+          <li><a href="/faq-page/index.html" target="_blank">FAQ</a></li>
+          <li><a href="/about-page/index.html" target="_blank">About</a></li>
         </ul>
       </nav>
     </div> <!-- close content-wrapper -->
@@ -42,8 +44,14 @@
       <div class="content-wrapper">
         <div class="mission-content">
           <h1>Our Mission - we want to make you the team you always wanted to be.</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem doloribus voluptatem et recusandae nesciunt beatae laudantium nostrum, fugit ipsum enim aliquam, modi veniam tempora. Libero, vel totam? Amet, quisquam? Ratione?</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem doloribus voluptatem et recusandae nesciunt beatae laudantium nostrum, fugit ipsum enim aliquam, modi veniam tempora. Libero, vel totam? Amet, quisquam? Ratione?</p>
+          <div class="mission-desc">
+            <div class="top-para">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem doloribus voluptatem et recusandae nesciunt beatae laudantium nostrum, fugit ipsum enim aliquam, modi veniam tempora. Libero, vel totam? Amet, quisquam? Ratione?</p>
+            </div>
+            <div class="btm-para">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem doloribus voluptatem et recusandae nesciunt beatae laudantium nostrum, fugit ipsum enim aliquam, modi veniam tempora. Libero, vel totam? Amet, quisquam? Ratione?</p>
+            </div>
+          </div>
         </div>
       </div> <!-- mission content wrapper ends -->
     </section>
@@ -75,23 +83,28 @@
 
   <footer>
     <div class="content-wrapper">
-      <div class="contact">
-        <address>
-          <h2>Contact</h2>
-          <p>555-555-5555<br/>hello@unplugged.com</p>
-        </address>
-      </div>
-      <div class="social-media">
-        <h2>Social</h2>
-        <a href="#" target="_blank"><img src="" alt="facebook-social-media"></a>
-        <a href="#"target="_blank"><img src="" alt="twitter-social-media"></a>
-        <a href="#"target="_blank"><img src="" alt="instagram-social-media"></a>
+      <div class="footer-top">
+        <div class="contact">
+          <address>
+            <h2>Contact</h2>
+            <p>555-555-5555<br/>hello@unplugged.com</p>
+          </address>
+        </div>
+        <div class="social">
+          <h2>Social</h2>
+          <div class="social-media">
+            <a href="#" target="_blank"><img src="" alt="facebook-social-media"></a>
+            <a href="#" target="_blank"><img src="" alt="twitter-social-media"></a>
+            <a href="#" target="_blank"><img src="" alt="instagram-social-media"></a>
+          </div>
+        </div>
       </div>
       <div class="copyright">
         <p>Copyright 2020 | Unplugged</p>
       </div>
     </div>  <!-- footer content wrapper ends -->
   </footer>
+  
 
   <script src="/js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="/js/plugins.js"></script>

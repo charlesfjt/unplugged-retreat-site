@@ -237,10 +237,11 @@ article{
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
   /* tablet styles here */
   body{
     width: 768px;
+    max-width: 768px;
   }
   .content-wrapper{
     padding: 0 3em;
@@ -320,7 +321,6 @@ article{
   }
   .contact, .social{
     display: flex;
-    flex-basis: 300px;
     align-items: center;
     padding-bottom: 2em;
   }
@@ -333,7 +333,25 @@ article{
     justify-content: flex-end;
   }
 
+  /***** about page *****/
+  .mission-desc{
+    display: flex;
+  }
+  .top-para{
+    margin-right: 1em;
+  }
+  .btm-para{
+    margin-left: 1em;
+  }
+/*** about page contact section ***/
+  .general-info, .chat{
+    flex: 1 1 45%;
+    line-height: .75;
+    justify-content: center;
+  }
 }
+
+
 
 @media only screen and (min-width: 1200px) {
   /* desktop styles here */
@@ -341,9 +359,32 @@ article{
     width: 1200px;
   }
   .content-wrapper{
-    padding: 0 2em;
+    padding: 0 5em;
   }
-  /**** aside section ****/
+  header .logo{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1em;
+  }
+  header nav{
+    width: 45%;
+  }
+  header nav ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+  header li{
+    padding-left: 2em;
+  }
+  .header-divider{
+    display: none;
+  }
+  aside h1{
+    width: 70%;
+  }
+  /**** DESKTOP aside section ****/
   .newsletter {
     display: flex;
     width: 100%;
@@ -356,37 +397,93 @@ article{
   }
   .form-description h2 {
     margin-bottom: 1em;
+
   }
   .form-title{
-    margin-left: 2em;
+    margin-left: 5em; 
   }
-}
+  .form-text {
+    width: 300px;
+    margin-bottom: 1em;
+  }
+  .form-button {
+    width: 320px;
+  }
+  /**** DESKTOP aside section END ****/
 
-/*** Footer section ***/
-footer .content-wrapper {
-  width: 100%;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-.footer-top {
-  display: flex;    
-}
-.contact, .social{
-  display: flex;
-  flex-basis: 500px;
-  align-items: center;
-  padding-bottom: 2em;
-  width: 500px;
-}
-.contact{
-  text-align: center;
-}
-.social{
-  display: inline-block;
-  text-align: center;
-  justify-content: flex-end;
-}
+  /**** DESKTOP Features section ****/
+  .features article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    flex: 1 1 280px;
+    padding: 0 2em;
+  }
+  /**** DESKTOP Features section END****/
 
+  /**** DESKTOP  Reviews section ****/
+  .review-title{
+    display: flex;
+  }
+  /**** DESKTOP  Reviews section END ****/
+
+  /*** DESKTOP Footer section ***/
+  footer .content-wrapper {
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .footer-top {
+    display: flex;    
+  }
+  .contact, .social{
+    display: flex;
+    flex-basis: 500px;
+    align-items: center;
+    padding-bottom: 2em;
+    width: 500px;
+  }
+  .contact{
+    text-align: center;
+  }
+  .social{
+    display: inline-block;
+    text-align: center;
+    justify-content: flex-end;
+  }
+/*** DESKTOP Footer section END ***/
+
+  /********************** DESKTOP about page **************************/
+  .mission-desc{
+    display: flex;
+  }
+  .top-para{
+    margin-right: 1em;
+  }
+  .btm-para{
+    margin-left: 1em;
+  }
+
+  /*** about page contact section ***/
+  .contact-section{
+    width: 100%;
+  }
+  .contact-section h1{
+    width: 100%;
+  }
+  
+  .general-info, .chat{
+    flex: 1 1 45%;
+    line-height: .75;
+    justify-content: center;
+  }
+  /************ DESKTOP about page END  **************/
+
+  /************ DESKTOP FAQ page **************/
+  
+
+} /*********************** DESKTOP MEDIA QUERIES END*********************/
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
