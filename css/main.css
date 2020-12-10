@@ -27,15 +27,6 @@ html {
  * Customize the background color to match your design.
  */
 
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
 
 /*
  * A better looking default horizontal rule
@@ -91,8 +82,10 @@ html{
   font-size: 16px;
 }  
 body{
-  width: 360px;
+  width: 100%;
+  color: #fff;
   font-family: 'Open Sans', sans-serif;
+  margin: 0;
 } 
 .content-wrapper{
   display: flex;
@@ -121,12 +114,16 @@ header, footer{
   align-items: center;
   flex-flow: row wrap;
 }
+header{
+  background-color: black;
+}
 header .content-wrapper{
-  padding: 15px 0;
+  margin: .5em 0 0;
 }
 header .logo {
   width: 100%;
   text-align: center;
+  margin: 0.5em 0
 }
 .header-divider{
   width: 100%;
@@ -136,18 +133,28 @@ header nav{
   width: 100%;
 }
 nav ul{
-  padding-left: 0;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: .5em 0;
+  padding: 0;
 }
 nav li{
   list-style: none;
+  margin: 0 2em;
+  border-bottom: tran;
 }
 nav a{
   text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+footer{
+  background-color: #202322;
 }
 footer .content-wrapper{
-  width: 55%;
+  width: 60%;
   margin: 50px 0;
+  text-align: center;
 }
 footer .social-media{
   display: flex;
@@ -157,28 +164,57 @@ footer .social-media{
 }
 
 /*********** Aside styles ***************/
-.form-title input{
-  padding: 0.5em;
+aside.form{
+  margin-top: 30px;
+}
+aside {
+  background-color: #527158;
+}
+input [type=text] {
+  box-sizing: border-box;
   width: 100%;
+  color: #2a423a;
+  font-style: italic;
 }
-.form-title{
-  justify-content: center;
-}
-.form-text {
-  width: 300px;
-  margin-bottom: 1em;
-}
-.form-button {
-  width: 320px;
+input [type=button] {
+  width: 100%;
+  padding: 20px 0;
+  background-color: #2a423a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #e2e3ed;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 
 /*********** Feature section styles ***************/
+.reviews{
+  background-color: #2a423a;
+}
 article{
   width: 70%;
 }
 .features .content-wrapper{
   justify-content: center;
+}
+
+/*********** ABOUT page styles ***************/
+.mission{
+  background-color: #527158; 
+}
+.contact-section{
+  background-color: #2a423a;
+}
+.general-info, .chat{
+  line-height: .5;
+}
+
+/*********** FAQ page styles ***************/
+.faq-section{
+  background-color: #527158;
 }
 
 
@@ -273,8 +309,8 @@ article{
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
   /* tablet styles here */
   body{
-    width: 768px;
-    max-width: 768px;
+    width: 100%;
+
   }
   .content-wrapper{
     padding: 0 3em;
@@ -366,7 +402,7 @@ article{
     justify-content: flex-end;
   }
 
-  /***** about page *****/
+  /* Tablet about page */
   .mission-desc{
     display: flex;
   }
@@ -376,7 +412,7 @@ article{
   .btm-para{
     margin-left: 1em;
   }
-/*** about page contact section ***/
+/*** Tablet about page contact section ***/
   .general-info, .chat{
     flex: 1 1 45%;
     line-height: .75;
@@ -389,7 +425,8 @@ article{
 @media only screen and (min-width: 1200px) {
   /* desktop styles here */
   body{
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
   }
   .content-wrapper{
     padding: 0 5em;
