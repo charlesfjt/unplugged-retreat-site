@@ -129,7 +129,7 @@ header{
   background-color: black;
 }
 header .content-wrapper{
-  margin: .5em 0 0;
+  margin: .5em 0 .5em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -167,15 +167,21 @@ footer{
   background-color: #202322;
 }
 footer .content-wrapper{
+  display: flex;
+  justify-content: center;
   width: 60%;
-  margin: 2em 0;
+  margin: 2em 0 0;
   text-align: center;
 }
 footer .social-media{
   display: flex;
+  justify-content: center;
 }
 .social{
   margin: 2em 0;
+}
+.social-icon {
+  margin: 0 1em;
 }
 
 /*************** Mobile Styles - Homepage ***************/
@@ -223,16 +229,19 @@ input[type=button] {
 
 /* Feature section styles */
 .reviews{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   background-color: #2a423a;
 }
 article{
   margin: 1em 0;
   padding: 0 1em;
+  text-align: center;
 }
 .features {
   background: url(/img/rawpixel-800820-unsplash1.jpg) center no-repeat #333;
   background-size: cover;
-  justify-content: center;
 }
 .features .content-wrapper{
   width: 100%;
@@ -241,20 +250,39 @@ article{
 .features-intro{
   padding-left: 1em;
 }
+.features i{
+  font-size: 3.75em;
+}
 /* reviews section styles */
 .review-img{
   background-size: cover;
 }
 
+/* Reviews section */
+.review {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
 /***** ABOUT page styles ******/
 .mission{
+  display: flex;
+  justify-content: center;
   background-color: #527158; 
 }
 .contact-section{
   background-color: #2a423a;
 }
+.contact-section .content-wrapper{
+text-align: center;
+display: flex;
+justify-content: center;
+}
 .general-info, .chat{
   line-height: .5;
+  margin: .5em auto;
 }
 
 .map figure{
@@ -276,9 +304,11 @@ article{
 /*********** FAQ page styles ***************/
 .faq-section{
   background-color: #527158;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
 }
-
-
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -369,6 +399,10 @@ article{
 
 /************************************* tablet styles here *************************************/
 @media only screen and (min-width: 768px) {
+  .content-wrapper{
+    max-width: 640px;
+    padding: 100px auto;
+  }
   header figure {
     width: 30%;
     display: flex;
@@ -426,10 +460,17 @@ article{
   }
 
   /**** Features section ****/
-  .features .content-wrapper{
-    width: 100%;
+  .features{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
-  
+  .features .content-wrapper{
+    margin: 1.5em 0;
+  }
+  .features-intro{
+    text-align: center;
+  }
   .features article{
     display: flex;
     justify-content: center;
@@ -437,6 +478,7 @@ article{
     flex-flow: column wrap;
     flex: 1 1 280px;
     padding: 0 2em;
+    margin: 1em auto;
   }
 
   /**** Reviews section ****/
@@ -447,23 +489,25 @@ article{
   /**** Footer section ****/
   footer .content-wrapper {
     width: 100%;
-    justify-content: space-around;
   }
   .footer-top {
-    display: flex;    
+    display: flex;
+    justify-content: space-around;   
   }
   .contact, .social{
     display: flex;
     align-items: center;
     padding-bottom: 2em;
+    margin: 0;;
   }
   .contact{
     text-align: center;
+    margin-right: 2em;
   }
   .social{
     display: inline-block;
+    margin-left: 2em;
     text-align: center;
-    justify-content: flex-end;
   }
 
   /* Tablet about page */
@@ -477,10 +521,22 @@ article{
     margin-left: 1em;
   }
 /*** Tablet about page contact section ***/
-  .general-info, .chat{
-    flex: 1 1 45%;
-    line-height: .75;
+  .contact-section{
+    display: flex;
     justify-content: center;
+  }
+  .contact-section .content-wrapper{
+    display: flex;
+    justify-content: center;
+  }
+  .general-info, .chat{
+    line-height: .75;
+  }
+  .general-info{
+    padding-right: 2em;
+  }
+  .chat{
+    padding-left: 2em;
   }
 }
 
@@ -528,7 +584,7 @@ article{
     width: 50%;
   }
   .form-description{
-    margin-right: 2em;
+    margin: auto 2em;
   }
   .form-description h2 {
     margin-bottom: 1em;
@@ -561,22 +617,21 @@ article{
     justify-content: center;
     text-transform: uppercase;
   }
-
-
   /**** DESKTOP aside section END ****/
 
   /**** DESKTOP Features section ****/
+  .features{
+    justify-content: center;
+  }
   .features .content-wrapper{
     width: 100%;
-    margin: auto;
-    padding: auto;
   }
   .features article{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column wrap;
-    flex: 1 1 280px;
+    flex: 1 1 200px;
     padding: 0 2em;
   }
   /**** DESKTOP Features section END****/
@@ -588,31 +643,40 @@ article{
   /**** DESKTOP  Reviews section END ****/
 
   /*** DESKTOP Footer section ***/
-  footer .content-wrapper {
-    width: 100%;
+  footer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
-  .footer-top {
-    display: flex;    
+  footer .content-wrapper{
+    width: 100%;
   }
   .contact, .social{
     display: flex;
-    flex-basis: 500px;
     align-items: center;
-    padding-bottom: 2em;
-    width: 500px;
+    margin: 0 3em;
   }
   .contact{
     text-align: center;
+    width: 400px;
   }
   .social{
     display: inline-block;
     text-align: center;
-    justify-content: flex-end;
+    justify-content: flex-end; 
+  }
+  .copyright{
+    width: 100%;
+text-align: center;
   }
 /*** DESKTOP Footer section END ***/
 
   /********************** DESKTOP about page **************************/
-  .mission-desc{
+  /*** about page mission section ***/
+  .mission{
+    display: flex;
+    justify-content: center;
+  }.mission-desc{
     display: flex;
   }
   .top-para{
@@ -620,6 +684,12 @@ article{
   }
   .btm-para{
     margin-left: 1em;
+  }
+
+  /*** about page map section ***/
+  .map{
+    display: flex;
+    justify-content: center;
   }
 
   /*** about page contact section ***/
@@ -635,10 +705,25 @@ article{
     line-height: .75;
     justify-content: center;
   }
+  .contact-section .content-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-right: 0;
+  }
+  .general-info, .chat{
+    line-height: .75;
+    justify-content: center;
+  }
+  .general-info{
+    padding-right: 2em;
+  }
+  .chat{
+    padding-left: 2em;
+  }
   /************ DESKTOP about page END  **************/
 
   /************ DESKTOP FAQ page **************/
-  
+ 
 
 } /*********************** DESKTOP MEDIA QUERIES END*********************/
 /* ==========================================================================
